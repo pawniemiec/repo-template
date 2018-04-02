@@ -2,16 +2,19 @@
 
 set -e
 
-DEST=$1
+SRC=$(dirname "$0")
+DST=$1
 
-if [ -z ${DEST} ]; then
+if [ -z ${DST} ]; then
     echo -e "Usage: \n $0 <destination_repo_folder>"
     exit 1
 fi
 
-cp -r .circleci ${DEST}
-cp -r .github ${DEST}
-cp .gitignore ${DEST}
-cp .editorconfig ${DEST}
-cp LICENSE ${DEST}
+echo "Copying files from ${SRC} to ${DST}"
+cp -r ${SRC}/.circleci ${DST}/
+cp -r ${SRC}/.github ${DST}/
+cp ${SRC}/.gitignore ${DST}/
+cp ${SRC}/.editorconfig ${DST}/
+cp ${SRC}/LICENSE ${DST}/
+echo "Done. Have a nice day!!!"
 
