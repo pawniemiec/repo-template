@@ -1,2 +1,2 @@
 # repo-template
-Templace of empty repository
+Template for new repository
