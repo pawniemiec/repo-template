@@ -6,13 +6,23 @@
 .env
 data
 
-
 # ---------------------------------------------------------------------
 # Languages
 # ---------------------------------------------------------------------
 # Github provide a decent set of default .gitignore templates, the
 # following are copied from there: https://github.com/github/gitignore/
 
+# ---------------------------------------------------------------------
+# terraform
+# ---------------------------------------------------------------------
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# .tfvars files
+*.tfvars
 
 # ----------------------------------------------------------
 # Go
