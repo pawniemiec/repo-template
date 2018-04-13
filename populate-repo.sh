@@ -11,10 +11,25 @@ if [ -z ${DST} ]; then
 fi
 
 echo "Copying files from ${SRC} to ${DST}"
-cp -r ${SRC}/.circleci ${DST}/
-cp -r ${SRC}/.github ${DST}/
-cp ${SRC}/.gitignore ${DST}/
-cp ${SRC}/.editorconfig ${DST}/
-cp ${SRC}/LICENSE ${DST}/
+if [ ! -e ${DST}/.circleci ]; then        cp -r ${SRC}/.circleci ${DST}/;     fi
+if [ ! -e ${DST}/.github ]; then          cp -r ${SRC}/.github ${DST}/;       fi
+if [ ! -e ${DST}/.gitignore ]; then       cp ${SRC}/.gitignore ${DST}/;       fi
+if [ ! -e ${DST}/.editorconfig ]; then    cp ${SRC}/.editorconfig ${DST}/;    fi
+if [ ! -e ${DST}/requirements.txt ]; then cp ${SRC}/requirements.txt ${DST}/; fi
+if [ ! -e ${DST}/LICENSE ]; then          cp ${SRC}/LICENSE ${DST}/;          fi
+
+cat >> $DST/README.md <<EOF
+
+## Prerequisites
+This project is dependent on the following libs and programs:
+$(sed -e 's/\(.*\)/- \1/' requirements.txt)
+
+## License
+All code is licensed under MIT license.
+
+## Make file
+$(fgrep -h "##" Makefile | fgrep -v fgrep |sed -e 's/\(.*\)\:.*##/- \1:/')
+EOF
+
 echo "Done. Have a nice day!!!"
 
