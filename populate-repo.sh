@@ -27,7 +27,7 @@ $(sed -e 's/\(.*\)/- \1/' requirements.txt)
 ## License
 All code is licensed under MIT license.
 
-## Make file
+## Makefile
 $(fgrep -h "##" Makefile | fgrep -v fgrep |sed -e 's/\(.*\)\:.*##/- \1:/')
 EOF
 
