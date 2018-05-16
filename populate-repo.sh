@@ -17,20 +17,18 @@ if [ ! -e ${DST}/.github ]; then            cp -r ${SRC}/.github ${DST}/;       
 if [ ! -e ${DST}/.gitignore ]; then         cp ${SRC}/.gitignore ${DST}/;         fi
 if [ ! -e ${DST}/.editorconfig ]; then      cp ${SRC}/.editorconfig ${DST}/;      fi
 if [ ! -e ${DST}/requirements.txt ]; then   cp ${SRC}/requirements.txt ${DST}/;   fi
-if [ ! -e ${DST}/LICENSE ]; then            cp ${SRC}/LICENSE ${DST}/;            fi
-if [ ! -e ${DST}/code_of_conduct.md ]; then cp ${SRC}/code_of_conduct.md ${DST}/; fi
+if [ ! -e ${DST}/LICENSE.md ]; then         cp ${SRC}/LICENSE.md ${DST}/;         fi
+if [ ! -e ${DST}/CONTRIBUTING.md ]; then    cp ${SRC}/CONTRIBUTING.md ${DST}/;    fi
+if [ ! -e ${DST}/README.md ]; then          cp ${SRC}/README.md ${DST}/;          fi
+if [ ! -e ${DST}/CODE_OF_CONDUCT.md ]; then cp ${SRC}/CODE_OF_CONDUCT.md ${DST}/; fi
 if [ ! -e ${DST}/Makefile ]; then           cp ${SRC}/Makefile ${DST}/;           fi
 
 echo Creating README.md
-cat > ${DST}/README.md <<EOF
-# ${REPO}
+cat >> ${DST}/README.md <<EOF
 
 ## Prerequisites
 This project is dependent on the following libs and programs:
 $(sed -e 's/\(.*\)/- \1/' requirements.txt)
-
-## License
-All code is licensed under MIT license.
 
 ## Makefile
 $(fgrep -h "##" Makefile | fgrep -v fgrep |sed -e 's/\(.*\)\:.*##/- \1:/')
