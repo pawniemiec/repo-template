@@ -15,6 +15,7 @@ echo "Copying files from ${SRC} to ${DST}"
 # if [ ! -e ${DST}/.circleci ]; then         cp -r ${SRC}/.circleci ${DST}/;       fi
 if [ ! -e ${DST}/.github ]; then            cp -r ${SRC}/.github ${DST}/;         fi
 if [ ! -e ${DST}/.gitignore ]; then         cp ${SRC}/.gitignore ${DST}/;         fi
+if [ ! -e ${DST}/.gitattributes ]; then     cp ${SRC}/.gitattributes ${DST}/;     fi
 if [ ! -e ${DST}/.editorconfig ]; then      cp ${SRC}/.editorconfig ${DST}/;      fi
 if [ ! -e ${DST}/requirements.txt ]; then   cp ${SRC}/requirements.txt ${DST}/;   fi
 if [ ! -e ${DST}/LICENSE.md ]; then         cp ${SRC}/LICENSE.md ${DST}/;         fi
