@@ -101,3 +101,7 @@ More information in [`CONTRIBUTING.md`](./CONTRIBUTING.md)
 
 ## Licensing
 The code in this project is licensed under this [`LICENSE`](./LICENSE.md)
+
+## Code of Conduct
+Please follow this [`CODE OF CONDUCT`](./CODE_OF_CONDUCT.md)
+
