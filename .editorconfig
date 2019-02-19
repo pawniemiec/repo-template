@@ -1,26 +1,35 @@
 root = true
 
 [*]
+charset = utf-8
+end_of_line = lf
 indent_style = space
 indent_size = 4
-end_of_line = lf
-charset = utf-8
+insert_final_newline = true
 trim_trailing_whitespace = true
-insert_final_newline = false
 
 [*.py]
+charset = utf-8
+end_of_line = lf
 indent_style = space
 indent_size = 4
-end_of_line = lf
-charset = utf-8
-trim_trailing_whitespace = true
 insert_final_newline = true
+trim_trailing_whitespace = true
 
-[Makefile]
-indent_style = tab
+[*.{scss,erb,js,json,njk,yml,yaml}]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[{*.md,README}]
+trim_trailing_whitespace = false
 
 [*.go]
 indent_style = tab
 
-[{*.md,README}]
-trim_trailing_whitespace = false
+[Makefile]
+indent_style = tab
+
