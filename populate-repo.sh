@@ -24,15 +24,39 @@ if [ ! -e ${DST}/README.md ]; then          cp ${SRC}/README.md ${DST}/;        
 if [ ! -e ${DST}/CODE_OF_CONDUCT.md ]; then cp ${SRC}/CODE_OF_CONDUCT.md ${DST}/; fi
 if [ ! -e ${DST}/Makefile ]; then           cp ${SRC}/Makefile ${DST}/;           fi
 
-echo Creating README.md
+echo Creating/updating README.md
 cat >> ${DST}/README.md <<EOF
 
 ## Prerequisites
+
 This project is dependent on the following libs and programs:
 $(sed -e 's/\(.*\)/- \1/' requirements.txt)
 
 ## Makefile
+
 $(fgrep -h "##" Makefile | fgrep -v fgrep |sed -e 's/\(.*\)\:.*##/- \1:/')
+
+## Installing / Getting started
+
+## Developing
+
+### Building
+
+### Deploying / Publishing
+
+## Configuration
+
+## Features
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our the process for submitting pull requests
+and code of conduct.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
 EOF
 
 echo "Done. Have a nice day!!!"

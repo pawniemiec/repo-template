@@ -1,4 +1,5 @@
 # Name of the project
+
 > Additional information or tagline
 
 A brief description of your project, what it is used for and how does life get
@@ -58,6 +59,7 @@ And again you'd need to tell what the previous code actually does.
 ## Features
 
 What's all the bells and whistles this project can perform?
+
 * What's the main functionality
 * You can also do another thing
 * If you get really randy, you can even do this
@@ -67,7 +69,8 @@ What's all the bells and whistles this project can perform?
 Here you should write what are all of the configurations a user can enter when
 using the project.
 
-#### Argument 1
+### Argument 1
+
 Type: `String`  
 Default: `'default value'`
 
@@ -75,17 +78,15 @@ State what an argument does and how you can use it. If needed, you can provide
 an example below.
 
 Example:
+
 ```bash
 awesome-project "Some other value"  # Prints "You're nailing this readme!"
 ```
 
-
 ## Contributing
 
-If you'd like to contribute, please fork the repository and use a feature
-branch. Pull requests are warmly welcome.
-
-More information in [`CONTRIBUTING.md`](./CONTRIBUTING.md)
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our the process for submitting pull requests
+and code of conduct.
 
 ## Links
 
@@ -99,9 +100,6 @@ More information in [`CONTRIBUTING.md`](./CONTRIBUTING.md)
   - Your other project: https://github.com/your/other-project/
   - Someone else's project: https://github.com/someones/awesome-project/
 
-## Licensing
-The code in this project is licensed under this [`LICENSE`](./LICENSE.md)
+## License
 
-## Code of Conduct
-Please follow this [`CODE OF CONDUCT`](./CODE_OF_CONDUCT.md)
-
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
